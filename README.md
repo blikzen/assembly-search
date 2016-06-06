@@ -1,8 +1,9 @@
 # assembly-search
-
 usage: 	$ assembly-search number-threads dictionary.txt consensus-assembly.fa ... nth-assembly.fa > hits.txt
 
 output: filename    chr-location    feature    index-on-chr  
+
+compile: g++ -o assembly-search assembly-search.cpp -std=c++1z -pthread
 
 Optimal solution for finding genomic features within multiple fasta formatted assemblies.
 
