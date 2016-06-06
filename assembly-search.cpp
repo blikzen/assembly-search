@@ -101,8 +101,8 @@ void define_threads(char *argv[], int n_samples, int n_threads, auto &query){
 		//run a single sample per thread
 		for (int n = 0; n < n_samples; n++)
 			thread_holder.push_back(t(runtime_threads,argv[3+n],std::ref(query)));
-		for (int x = 0; x < thread_holder.size(); x++)
-			thread_holder[x].join();
+		for (threads : thread_holder)
+				threads.join();
 	}else{
 		//else iterate through subsets of threads
 		double n_iterations = floor((n_samples / n_threads) + 0.5);
@@ -114,8 +114,8 @@ void define_threads(char *argv[], int n_samples, int n_threads, auto &query){
 				int ptr = (n*n_per_thread)+x;
 				thread_holder.push_back(t(runtime_threads,argv[ptr],std::ref(query)));
 			}
-			for (int x = 0; x < thread_holder.size(); x++)
-				thread_holder[x].join();
+			for (threads : thread_holder)
+				threads.join();
 		}
 	}
 	
