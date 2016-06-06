@@ -1,6 +1,8 @@
 # assembly-search
 
-usage: $ assembly-search dictionary.txt consensus-assembly.fa > output.txt
+Multiple assembly search -.
+usage: 	$ assembly-search dictionary.txt consensus-assembly.fa ... nth-assembly.fa > output.txt
 
-Optimal solution for finding genomic features within a fasta formatted assembly.
-Both dictionary and assembly files are line delimited. 
+Optimal solution for finding genomic features within a fasta formatted assemblies.
+
+Dictionary and assembly files are line delimited. 
