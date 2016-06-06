@@ -50,9 +50,8 @@ v<s> load_query(auto *file){
 	s line;
 	v<s> push;
 	i input(file);
-	while (getline(input,line)){
+	while (getline(input,line))
 		push.push_back(line);
-	}
 	input.close();
 	return(push);
 
