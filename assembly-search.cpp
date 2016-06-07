@@ -102,7 +102,7 @@ void define_threads(char *argv[], int n_samples, int n_threads, auto &query){
 		for (int n = 0; n < n_samples; n++)
 			thread_holder.push_back(t(runtime_threads,argv[3+n],std::ref(query)));
 		for (threads : thread_holder)
-				threads.join();
+			threads.join();
 	}else{
 		//else iterate through subsets of threads
 		double n_iterations = floor((n_samples / n_threads) + 0.5);
